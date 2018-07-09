@@ -38,7 +38,7 @@ public class PersonDaoTest {
     }
 
     @Test
-    @Ignore
+//    @Ignore
     public void insertPerson() {
         Person person = new Person();
         person.setId(4);
@@ -60,7 +60,7 @@ public class PersonDaoTest {
     }
 
     @Test
-//    @Ignore
+    @Ignore
     public void deletePerson() {
         int effectedNum = personDao.deletePerson(4);
         assertEquals(1,effectedNum);

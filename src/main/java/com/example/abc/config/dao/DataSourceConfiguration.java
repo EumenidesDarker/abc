@@ -11,13 +11,13 @@ import java.beans.PropertyVetoException;
 @Configuration
 @MapperScan("com.example.abc.dao")
 public class DataSourceConfiguration {
-    @Value("${jdbc.driver}")
+    @Value("${datasource.driver-class-name}")
     private String jdbcDriver;
-    @Value("${jdbc.url}")
+    @Value("${datasource.url}")
     private String jdbcUrl;
-    @Value("${jdbc.username}")
+    @Value("${datasource.username}")
     private String jdbcUsername;
-    @Value("${jdbc.password}")
+    @Value("${datasource.password}")
     private String jdbcPassword;
 
     @Bean(name="dataSource")

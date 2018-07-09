@@ -2,8 +2,8 @@ server:
   port: 8082
   servlet:
     context-path: /abc
-jdbc:
-  driver: com.mysql.jdbc.Driver
+datasource:
+  driver-class-name: com.mysql.jdbc.Driver
   url: jdbc:mysql://39.108.71.225:3306/test?characterEncoding=utf-8&useSSL=false
   username: root
   password: root
