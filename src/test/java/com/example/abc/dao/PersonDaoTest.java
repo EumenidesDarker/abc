@@ -23,46 +23,46 @@ public class PersonDaoTest {
     @Ignore
     public void queryPerson() {
         List<Person> personList = personDao.queryPerson();
-        assertEquals(3,personList.size());
-       /* for (Person p:personList){
+//        assertEquals(5, personList.size());
+        for (Person p:personList){
             System.out.println(p.getId()+","+p.getName()+","+p.getAge());
-        }*/
+        }
     }
 
     @Test
     @Ignore
     public void queryPersonById() {
         Person person = personDao.queryPersonById(1);
-        //System.out.println(person.getId()+","+person.getName()+","+person.getAge());
-        assertEquals("abc",person.getName());
+//        System.out.println(person.getId()+","+person.getName()+","+person.getAge());
+        assertEquals("abc", person.getName());
     }
 
     @Test
-//    @Ignore
+    @Ignore
     public void insertPerson() {
         Person person = new Person();
-        person.setId(4);
-        person.setName("baby");
-        person.setAge(3);
-        int effectedNum=personDao.insertPerson(person);
-        assertEquals(1,effectedNum);
+        person.setId(7);
+        person.setName("Tiffany");
+        person.setAge(22);
+        int effectedNum = personDao.insertPerson(person);
+        assertEquals(1, effectedNum);
     }
 
     @Test
     @Ignore
     public void updatePerson() {
-        Person person=new Person();
-        person.setId(3);
-        person.setName("Angle");
+        Person person = new Person();
+        person.setId(7);
+        person.setName("Sunny");
         person.setAge(18);
-        int effectedNum=personDao.updatePerson(person);
-        assertEquals(1,effectedNum);
+        int effectedNum = personDao.updatePerson(person);
+        assertEquals(1, effectedNum);
     }
 
     @Test
-    @Ignore
+//    @Ignore
     public void deletePerson() {
-        int effectedNum = personDao.deletePerson(4);
-        assertEquals(1,effectedNum);
+        int effectedNum = personDao.deletePerson(7);
+        assertEquals(1, effectedNum);
     }
 }

@@ -26,7 +26,7 @@ public class SessionFactoryConfiguration {
     @Value("${entity_package}")
     private String entityPackage;
 
-    @Bean(name="sqlSessionFactory")
+    @Bean(name = "sqlSessionFactory")
     public SqlSessionFactoryBean createSqlSessionFactoryBean() throws IOException {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(mybatisConfigFilePath));
